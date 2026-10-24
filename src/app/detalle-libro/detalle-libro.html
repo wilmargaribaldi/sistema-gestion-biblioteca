@@ -1,0 +1,25 @@
+<div style="padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+  @if (libroSeleccionado) {
+    <mat-card style="width: 100%; max-width: 500px;">
+      <mat-card-header>
+        <mat-card-title>Ficha Técnica: {{ libroSeleccionado.id }}</mat-card-title>
+        <mat-card-subtitle>{{ libroSeleccionado.categoria }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-content style="padding-top: 20px; font-size: 1.1rem;">
+        <p><strong>Título:</strong> {{ libroSeleccionado.titulo }}</p>
+        <p><strong>Autor:</strong> {{ libroSeleccionado.autor }}</p>
+        <p><strong>Ejemplares disponibles:</strong> {{ libroSeleccionado.disponibles }}</p>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-stroked-button color="accent" routerLink="/">⬅ Volver al Catálogo</button>
+      </mat-card-actions>
+    </mat-card>
+  } @else {
+    <h2>El libro no existe.</h2>
+    <button mat-raised-button routerLink="/">Volver al catálogo</button>
+  }
+</div>
