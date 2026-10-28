@@ -1,0 +1,29 @@
+<div style="padding: 30px; max-width: 1000px; margin: 0 auto;">
+  <h2 style="text-align: center; font-family: Roboto, sans-serif; margin-bottom: 30px;">
+    Dashboard de la biblioteca
+  </h2>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <!-- Gráfico de barras -->
+    <mat-card style="flex: 1; min-width: 400px;">
+      <mat-card-header>
+        <mat-card-title>Inventario por categoría</mat-card-title>
+        <mat-card-subtitle>Total de unidades disponibles</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content style="padding-top: 20px;">
+        <canvas #graficoBarras></canvas>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Gráfico de dona -->
+    <mat-card style="flex: 1; min-width: 300px; max-width: 400px;">
+      <mat-card-header>
+        <mat-card-title>Estado de salud del catálogo</mat-card-title>
+        <mat-card-subtitle>Stock crítico: menos de 10 unidades</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content style="padding-top: 20px;">
+        <canvas #graficoDona></canvas>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
